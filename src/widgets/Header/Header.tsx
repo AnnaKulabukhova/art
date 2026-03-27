@@ -1,4 +1,4 @@
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import clsx from "clsx";
 
 export const Header = () => {
