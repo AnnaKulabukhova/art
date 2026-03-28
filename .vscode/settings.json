@@ -1,3 +1,11 @@
 {
-    "js/ts.tsdk.path": "node_modules\\typescript\\lib"
+	"js/ts.tsdk.path": "node_modules\\typescript\\lib",
+	"editor.tabSize": 2,
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "always",
+		"source.fixAll.eslint": "always"
+	},
+	"scss.lint.unknownAtRules": "ignore",
+	"css.lint.unknownAtRules": "ignore",
 }

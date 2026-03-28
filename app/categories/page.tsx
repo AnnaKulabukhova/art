@@ -1,6 +1,5 @@
-import { CategoriesPage } from "@/src/views/CategoriesPage/CategoriesPage";
-
+import { CategoriesPage } from '@/src/views/CategoriesPage/CategoriesPage';
 
 export default function Page() {
-  return <CategoriesPage />;
+	return <CategoriesPage />;
 }
