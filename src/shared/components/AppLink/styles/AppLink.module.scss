@@ -1,0 +1,38 @@
+@use 'theme/light';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.button_filled_primary {
+  padding: 6px 10px;
+  background-color: var(--button-filled-bg);
+  border-radius: 20px;
+  border: none;
+}
+
+.button_filled_secondary {
+  padding: 6px 10px;
+  background-color: var(--button-filled-bg);
+  border-radius: 20px;
+  border: none;
+}
+
+.button_outline_primary {}
+
+.button_ghost {
+  // min-height: 40px;
+  padding: 8px 8px;
+  background-color: transparent;
+  border: none;
+}
+
+.button_burger {
+  position: relative;
+  width: 6px;
+  height: 1px;
+  background-color: aqua;
+}
