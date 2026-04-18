@@ -1,0 +1,1 @@
+export type classNamesType = string | Record<string, boolean> | string[] | boolean | null | undefined
