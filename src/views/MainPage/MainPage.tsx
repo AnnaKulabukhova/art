@@ -1,14 +1,9 @@
-import Link from 'next/link';
+import { HeroMain } from '@/src/widgets/hero/HeroMain';
 
 export const MainPage = () => {
 	return (
 		<>
-			<section className='hero'>
-				<h1 className={'title'}>Свременное искусство</h1>
-				<p className='subtitle'>Подзаголовок совремменного искусства</p>
-				<button>Начать изучение</button>
-				<span className='Будет картина на всю секцию, придумать как сделать'></span>
-			</section>
+			<HeroMain />
 			<section className='open_style'>
 				<h2>Сецессионизм</h2>
 				<div>
@@ -30,7 +25,7 @@ export const MainPage = () => {
 				</div>
 			</section>
 			<section>
-				<span>каккртина, которая будет мняться каждый день</span>
+				<span>картина, которая будет мняться каждый день</span>
 				<div>
 					<span>автор</span>
 					<span>год</span>
