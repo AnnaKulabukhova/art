@@ -1,16 +1,14 @@
+@use './reset.scss';
+@use './tokens/index.scss' as tokens;
+@use './themes/index.scss' as themes;
+@use "tailwindcss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import './reset.scss';
-@import './tokens/index.scss';
-@import './themes/index.scss';
-
 body {
-  margin: 0;
   background: var(--background);
-  color: var(--foreground);
-  font: var(--font-s);
 }
 
 .main {

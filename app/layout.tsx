@@ -4,6 +4,7 @@ import './styles/globals.scss';
 import localFont from 'next/font/local';
 import { Header } from '@/src/widgets/Header';
 import { Footer } from '@/src/widgets/Footer';
+import { cls } from '@/src/shared/helpers/classNames/classNames';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -39,12 +40,14 @@ export default function RootLayout({
 	return (
 		<html
 			lang='ru'
-			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-			<body className={`${cormorant.className} light_theme min-h-full flex flex-col`}>
+			className={cls(geistSans.variable, geistMono.variable, 'h-full', 'antialiased')}>
+			<body className={cls(cormorant.className, 'light_theme', 'min-h-full', 'flex', 'flex-col')}>
 				<Header />
-				<main className='main'>{children}</main>
+				<main className='main'>
+					{children}
+				</main>
 				<Footer />
 			</body>
-		</html>
+		</html >
 	);
 }

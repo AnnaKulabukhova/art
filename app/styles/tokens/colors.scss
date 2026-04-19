@@ -1,7 +1,18 @@
 :root {
-  --white-100: #ffffff;
-  --white-200: #F8F9FB;
+  --neutral-100: #ffffff;
+  --neutral-200: #f7f7f7;
+  --neutral-300: #797a7d;
 
-  --black-1100: #2A2E35;
-  --black-1200: #000000;
+  --neutral-1100: #2A2E35;
+  --neutral-1200: #000000;
+
+  --accent-100: #F5E6EA;
+  --accent-300: #C05A72;
+  --accent-500: #8B1E3F;
+  --accent-600: #6F1832;
+
+  /* semantic */
+  --success-500: #2E7D32;
+  --warning-500: #ead983;
+  --error-500: #D32F2F;
 }

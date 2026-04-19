@@ -1,5 +1,8 @@
 .light_theme {
-  --background: var(--white-100);
-  --text-primary: var(--black-1100);
-  --layout: var(--black-1100);
+  --background: var(--neutral-200);
+  --text-primary: var(--neutral-1100);
+  --text-inverted: var(--neutral-200);
+  --text-accent: var(--accent-500);
+  --layout-bg: var(--neutral-200);
+  --layout-borderColor: var(--neutral-300);
 }
