@@ -4,49 +4,55 @@
 	padding: var(--space-2) var(--space-5);
 	align-items: center;
 	position: sticky;
-	flex-wrap: wrap;
-	background: var(--layout);
+	top: 0;
+	flex-wrap: nowrap;
+	background: var(--layout-bg);
+	border-bottom: 1px solid var(--layout-borderColor);
+	z-index: 10;
 }
 
 .logo {
-	margin-right: var(--space-5);
+	display: block;
+	margin-right: var(--space-4);
 }
+
+
+.navigation {
+	display: none;
+}
+
+@media (min-width: 1280px) {
+	.navigation {
+		display: flex;
+	}
+}
+
+.navigation_mobile {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 48px;
+	height: calc(100dvh - 48px);
+	left: 0;
+	right: 0;
+	padding: 24px;
+	background: var(--layout-bg);
+
+}
+
 
 .actions {
 	display: flex;
 	margin-left: auto;
-	gap: var(--spacer-2)
-}
-
-.navigation {
-	position: fixed;
-	left: 0;
-	right: 0;
-	height: calc(100dvh - 48px);
-	top: 48px;
-	background-color: #2A2E35;
-	display: flex;
-	flex-direction: column;
-	padding: 24px;
-}
-
-.navigation_mobile {
-	position: fixed;
-	left: 0;
-	right: 0;
-	height: calc(100dvh - 48px);
-	top: 48px;
-	background-color: #2A2E35;
-	display: flex;
-	flex-direction: column;
-	padding: var(--space-5);
+	gap: var(--space-1)
 }
 
 .button_burger {
 	position: relative;
 	width: 20px;
 	height: 2px;
-	background-color: var(--white-100);
+	background-color: var(--neutral-1100);
+	margin-left: var(--space-1);
 
 	&::before,
 	&::after {
@@ -55,14 +61,14 @@
 		left: 0;
 		right: 0;
 		height: 2px;
-		background-color: var(--white-100);
+		background-color: var(--neutral-1100);
 	}
 
 	&::before {
-		top: -4px;
+		top: -6px;
 	}
 
 	&::after {
-		bottom: -4px;
+		bottom: -6px;
 	}
 }

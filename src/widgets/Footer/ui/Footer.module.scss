@@ -1,5 +1,9 @@
 .footer {
-	width: 100%;
-	min-height: 100px;
-	background: var(--layout);
+	background: var(--layout-bg);
+	border-top: 1px solid var(--layout-borderColor);
+	padding: var(--space-5);
+}
+
+.logo {
+	margin-bottom: var(--space-5);
 }

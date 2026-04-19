@@ -1,11 +1,12 @@
 "use client"
 import Image from 'next/image';
 import styles from './Header.module.scss';
-import clsx from 'clsx';
 import Link from 'next/link';
 import { Button } from '@/src/shared/components/Button';
 import { useState } from 'react';
 import { AppRoutes } from '@/src/shared/constants/AppRoutes';
+import { AppLink } from '@/src/shared/components/AppLink';
+import { cls } from '@/src/shared/helpers/classNames/classNames';
 
 export const Header = () => {
 	const [isOpenNavbar, setIsOpenNavbar] = useState(false)
@@ -14,37 +15,46 @@ export const Header = () => {
 		setIsOpenNavbar((value) => !value)
 	}
 
-	console.log(isOpenNavbar);
+	// console.log(isOpenNavbar);
 
 	return (
-		<header className={clsx('p-2', styles.header)}>
+		<header className={cls('p-2', styles.header)}>
 			<Link
 				href={AppRoutes.mainPage}
 			>
 				<Image
-					src={'/icons/logo/logo_light.svg'}
+					src={'/icons/logo/logo_dark.svg'}
 					alt='logo'
-					width={92}
-					height={28}
+					width={105}
+					height={32}
 					className={styles.logo}
+					fetchPriority='high'
+					loading='eager'
 				/>
 			</Link>
-			{isOpenNavbar && (
-				<nav className={styles.navigation}>
-					<Link href={AppRoutes.stylesPage}>Стили</Link>
-					<Link href={AppRoutes.quizPage}>Квиз</Link>
-					<Link href={AppRoutes.glossaryPage}>Глоссарий</Link>
-				</nav>
-			)}
+
+
+			<nav className={cls(
+				styles.navigation,
+				'xl:flex',
+				isOpenNavbar && styles.navigation_mobile
+			)}>
+				<AppLink color='neutral' href={AppRoutes.stylesPage}>Стили</AppLink>
+				<AppLink color='neutral' href={AppRoutes.quizPage}>Квиз</AppLink>
+				<AppLink color='neutral' href={AppRoutes.glossaryPage}>Глоссарий</AppLink>
+			</nav>
 
 			<div className={styles.actions}>
-				<Button variant='filledPrimary' onCLick={() => { }}>Вход</Button>
-				<Button variant='filledSecondary' onCLick={() => { }}>Тема</Button>
-				<Button variant='outlinePrimary' onCLick={() => { }} >Язык</Button>
-				<Button variant='ghost' onCLick={handeleOpenNavbar}>
+				<Button variant='filled' color='primary' onCLick={() => { }}>Вход</Button>
+				<Button variant='ghost' onCLick={() => { }}>
+					<Image src={'./icons/theme/light_theme.svg'} width={32} height={32} alt='theme' />
+				</Button>
+				<Button variant='ghost' onCLick={() => { }}>RU</Button>
+
+				<Button classNames='xl:hidden' variant='ghost' onCLick={handeleOpenNavbar}>
 					<span className={styles.button_burger} />
 				</Button>
 			</div>
-		</header >
+		</header>
 	);
 };
