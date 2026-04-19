@@ -1,3 +1,17 @@
 :global(.light_theme) .button {
-  --button-filled-bg: rgb(139, 139, 189);
+  --button-filled-primary-bg: var(--accent-500);
+  --button-filled-primary-color: var(--neutral-100);
+
+  --button-filled-neutral-bg: var(--neutral-1100);
+  --button-filled-neutral-color: var(--neutral-100);
+
+  --button-outline-primary-borderColor: var(--accent-500);
+  --button-outline-primary-color: var(--accent-500);
+
+  --button-outline-neutral-borderColor: var(--neutral-1100);
+  --button-outline-neutral-color: var(--neutral-1100);
+
+  --button-ghost-primary-color: var(--accent-500);
+
+  --button-ghost-neutral-color: var(--neutral-1100);
 }

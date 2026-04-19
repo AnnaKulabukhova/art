@@ -1,10 +1,13 @@
 import { ReactNode } from "react";
 
-export type VariantsType = 'filledPrimary' | 'filledSecondary' | 'outlinePrimary' | 'outlineScondary' | 'ghost'
+
+export type VariantsButtonType = 'filled' | 'outline' | 'ghost'
+export type ColorsButtonType = 'primary' | 'neutral'
 
 export type ButtonType = {
-  variant: VariantsType;
+  variant?: VariantsButtonType;
+  color?: ColorsButtonType;
   children: ReactNode;
   onCLick: () => void;
-  classnames?: string;
+  classNames?: string;
 }

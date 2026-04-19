@@ -1,18 +1,25 @@
-import { ButtonType, VariantsType } from "./types";
+import { ButtonType, ColorsButtonType, VariantsButtonType } from "./types";
 import styles from './styles/Button.module.scss'
+import { cls } from "../../helpers/classNames/classNames";
 
-export const Button = ({ variant, children, onCLick, classnames }: ButtonType) => {
+export const Button = ({ children, onCLick, classNames, variant = 'filled', color = 'neutral' }: ButtonType) => {
 
-  const variantButton: Record<VariantsType, string> = {
-    filledPrimary: styles.button_filled_primary,
-    filledSecondary: styles.button_filled_secondary,
-    outlinePrimary: styles.button_outline_primary,
-    outlineScondary: styles.button_outline_secondary,
+  const variantMap: Record<VariantsButtonType, string> = {
+    filled: styles.button_filled,
+    outline: styles.button_outline,
     ghost: styles.button_ghost
   }
 
+  const colorMap: Record<ColorsButtonType, string> = {
+    primary: styles.button_primary,
+    neutral: styles.button_neutral,
+  }
+
   return (
-    <button className={`${styles.button} ${variantButton[variant]} `} onClick={onCLick}>
+    <button
+      className={cls(styles.button, variantMap[variant], colorMap[color], classNames)}
+      onClick={onCLick}
+    >
       {children}
     </button>
   )

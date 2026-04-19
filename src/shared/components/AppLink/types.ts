@@ -1,11 +1,13 @@
 import { ReactNode } from "react";
 import { AppRoutes } from "../../constants/AppRoutes";
 
-export type VariantsType = 'primary' | 'navLink'
+export type ColorsAppLinkType = 'primary' | 'neutral'
+export type VariantsAppLinkType = 'filled' | 'outline' | 'ghost'
 
 export type AppLinkType = {
-  variant: VariantsType;
+  variant?: VariantsAppLinkType;
+  color?: ColorsAppLinkType;
   children: ReactNode;
-  classnames?: string;
+  classNames?: string;
   href: AppRoutes
 }
