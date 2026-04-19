@@ -1,8 +1,27 @@
 :root {
-  --font-family-main: 'cormorant';
+  --font-family-main: 'cormorant', serif;
 
-  --font-size-s: 18px;
-  --line-height-s: 22px;
+  /* font sizes */
+  --font-size-xs: 0.875rem; //14
+  --font-size-s: 1rem; //16
+  --font-size-m: 1.25rem; //20
+  --font-size-l: 1.75rem; //28
+  --font-size-xl: 2.5rem; //40
+  --font-size-xxl: 3.5rem; //56
 
-  --font-s: var(--font-size-s) / var(--line-height-s) var(--font-family-main);
+  /* line  height */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.7;
+
+
+  /* letter spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-normal: 0;
+
+  /* colors */
+  --text-primary: #111;
+  --text-inverted: #fff;
+  --text-accent: #6b7280;
 }
