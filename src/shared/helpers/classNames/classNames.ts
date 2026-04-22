@@ -22,7 +22,6 @@ export const cls = (...classes: Array<classNamesType>) => {
         .map(([key]) => key)
 
       arrClasses.push(...a)
-
     }
   })
 
